@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MyCrypt.Portfolio">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout>
+
+                <StackLayout>
+                    <Label Text="Total Crypto Value"
+                           FontSize="35"/>
+
+
+                    <Label Text="{Binding totalCryptoValue}"
+                   HorizontalOptions="Center"
+                   FontSize="50"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Bank Value"
+                           FontSize="35"/>
+                        
+                        <Button Clicked="btn_Bank_Add_Clicked" Text="+"/>
+                    </StackLayout>
+
+
+                    <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                        <Label Text="{Binding bankAmount}"
+                               HorizontalOptions="Center"
+                               FontSize="50"/>
+
+                    </StackLayout>
+
+
+                </StackLayout>
+
+
+            </StackLayout>
+            
+            
+
+            <ListView ItemsSource="{Binding portfolioList}"
+                  HasUnevenRows="true"
+                  SeparatorVisibility="Default"
+                  SeparatorColor="Black"
+                  Grid.Column="0" Grid.Row="1"
+                  x:Name="listxamlView"
+                  ItemTapped="OnItemSelected"
+                  IsPullToRefreshEnabled="True"
+                  Refreshing="ListItems_Refreshing">
+
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame  BorderColor="White" HasShadow="True">
+                                <StackLayout Orientation="Horizontal" Padding="0">
+
+                                    <Image Source="{Binding iconIdentity}" Margin="0"/>
+
+                                    <StackLayout>
+                                        <Label TextColor="Black" Margin="0" Padding="0" FontSize="Medium"
+                                       Text="{Binding name}"
+                                       HorizontalOptions="Fill"/>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label TextColor="Black" Margin="0" Padding="0" FontSize="Large"
+                                               Text="{Binding symbol}"
+                                               HorizontalOptions="Start"/>
+
+                                        </StackLayout>
+                                    </StackLayout>
+
+                                    <StackLayout 
+                                    HorizontalOptions="EndAndExpand"
+                                    VerticalOptions="Center">
+
+                                        <Label TextColor="Black" FontSize="Medium"
+                                               Text="{Binding holdings}"
+                                               VerticalOptions="Center"/>
+
+
+
+                                    </StackLayout>
+
+                                </StackLayout>
+                            </Frame>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

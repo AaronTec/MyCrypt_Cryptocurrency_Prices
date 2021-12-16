@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCrypt.Android", "MyCrypt\MyCrypt.Android\MyCrypt.Android.csproj", "{C095B66A-80C1-45A7-BD43-09403F823A88}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCrypt", "MyCrypt\MyCrypt\MyCrypt.csproj", "{0B4A3629-A3F0-4052-8EBD-1DC28638D313}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C095B66A-80C1-45A7-BD43-09403F823A88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C095B66A-80C1-45A7-BD43-09403F823A88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C095B66A-80C1-45A7-BD43-09403F823A88}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C095B66A-80C1-45A7-BD43-09403F823A88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C095B66A-80C1-45A7-BD43-09403F823A88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C095B66A-80C1-45A7-BD43-09403F823A88}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0B4A3629-A3F0-4052-8EBD-1DC28638D313}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B4A3629-A3F0-4052-8EBD-1DC28638D313}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B4A3629-A3F0-4052-8EBD-1DC28638D313}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B4A3629-A3F0-4052-8EBD-1DC28638D313}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7737F0F9-030C-45C4-AC95-B2BF01C09976}
+	EndGlobalSection
+EndGlobal

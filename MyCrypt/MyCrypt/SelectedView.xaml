@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MyCrypt.SelectedView">
+    <ContentPage.Content>
+
+
+
+
+        <StackLayout>
+           
+
+            <Image Source="{Binding iconSource}" 
+                   HorizontalOptions="Fill"
+                   HeightRequest="75"
+                   WidthRequest="75"
+                   Margin="2"/>
+
+            <StackLayout HorizontalOptions="Center">
+                <Label Text="{Binding cryptoName}"
+                   HorizontalOptions="Center" 
+                   FontSize="50"
+                   x:Name="lbl_cryptName"/>
+
+                
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="{Binding symbol}"
+                   HorizontalOptions="Center"
+                   FontSize="50"/>
+
+                <ImageButton HorizontalOptions="Center" x:Name="btn_Favourite" Clicked="btn_Favourite_Clicked" WidthRequest="50" HeightRequest="50" BackgroundColor="White"/>
+
+
+            </StackLayout>
+            
+            
+
+            
+            <Label Text="{Binding priceUSD}"
+                   FontSize="40"
+                   HorizontalOptions="Center"
+                   x:Name="lbl_thePrice"/>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+                <Button Clicked="btn_purchase_Clicked" Text="Buy"/>
+
+                <Button  Clicked="btn_sell_Clicked" Text="Sell"/>
+
+            </StackLayout>
+
+            <Label Text= "Price Change"
+                   HorizontalOptions="Center"
+                   FontSize="30"/>
+
+
+            <Frame BorderColor="Black"
+                   Padding="5"
+                   BackgroundColor="AliceBlue"
+                   HorizontalOptions="Fill">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Frame BackgroundColor="{Binding percentage_1hr_FrameColour}"  BorderColor="Black" Padding="5" WidthRequest="80">
+                        <StackLayout>
+                            <Label Text="{Binding percentage_1hr}" FontSize="25"/>
+                            <Label Text="1hr" HorizontalOptions="Center" FontSize="20"/>
+                        </StackLayout>
+
+                    </Frame>
+                    <Frame BackgroundColor="{Binding percentage_24hr_FrameColour}"   BorderColor="Black" Padding="5" WidthRequest="80">
+                        <StackLayout>
+                            <Label Text="{Binding percentage_24hr}" FontSize="25"/>
+                            <Label Text="24hr" HorizontalOptions="Center" FontSize="20"/>
+                        </StackLayout>
+
+                    </Frame>
+                    <Frame BackgroundColor="{Binding percentage_7d_FrameColour}" BorderColor="Black" Padding="5" WidthRequest="80">
+                        <StackLayout>
+                            <Label Text="{Binding percentage_7d}" FontSize="25"/>
+                            <Label Text="7Days" HorizontalOptions="Center" FontSize="20"/>
+                        </StackLayout>
+
+                    </Frame>
+                    <Frame BackgroundColor="{Binding percentage_30d_FrameColour}"   BorderColor="Black" Padding="5" x:Name="frm_30d"  WidthRequest="80">
+                        <StackLayout>
+                            <Label Text="{Binding percentage_30d}" FontSize="25"/>
+                            <Label Text="30Days" HorizontalOptions="Center" FontSize="20"/>
+                        </StackLayout>
+
+                    </Frame>
+                </StackLayout>
+            </Frame>
+
+            <Label  Text="MarketCap"
+                    FontSize="30"
+                    HorizontalOptions="Center"/>
+
+            <Label Text="{Binding marketCapp}"
+                   FontSize="30"
+                   HorizontalOptions="Center"/>
+
+
+
+
+
+        </StackLayout>
+        
+        
+        
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -28,7 +28,7 @@ namespace MyCrypt
             URL.Query = queryString.ToString();
 
             var client = new WebClient();
-            client.Headers.Add("X-CMC_PRO_API_KEY", "b6c51de4-5dbc-4862-b03b-3526b0a49fbd");
+            client.Headers.Add("X-CMC_PRO_API_KEY", "Redacted");
             client.Headers.Add("Accepts", "application/json");
             return client.DownloadString(URL.ToString());
 
@@ -50,7 +50,7 @@ namespace MyCrypt
             URL.Query = queryString.ToString();
 
             var client = new WebClient();
-            client.Headers.Add("X-CMC_PRO_API_KEY", "b6c51de4-5dbc-4862-b03b-3526b0a49fbd");
+            client.Headers.Add("X-CMC_PRO_API_KEY", "Redacted");
             client.Headers.Add("Accepts", "application/json");
             return client.DownloadString(URL.ToString());
 
